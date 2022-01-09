@@ -31,14 +31,15 @@ export default {
       "ws://localhost:8545"
     );
     const signer = provider.getSigner();
-    this.itemManager = new ethers.Contract(
+    const itemManager = new ethers.Contract(
       addresses.ItemManager,
       ItemManagerContract.abi,
       signer
     );
-    /* this.itemManager.on("CheckState", (index, state, address) => {
+    itemManager.on("CheckState", (index, state, address) => {
       console.log(index, state, address);
-    }); */
+    });
+    this.itemManager = itemManager;
   },
   methods: {
     handleAddItem: async function () {
