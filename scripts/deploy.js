@@ -5,7 +5,7 @@
 // Runtime Environment's members available in the global scope.
 const hre = require("hardhat");
 const fs = require("fs");
-const path = "client/src/.env/contract-addresses.json";
+const path = "frontend/src/.env/contract-addresses.json";
 
 async function main() {
   // Hardhat always runs the compile task when running scripts with its command

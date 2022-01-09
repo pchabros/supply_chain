@@ -1,2 +1,0 @@
-ethers.getContractAt("ItemManager", addresses.ItemManager)
-ItemManager
